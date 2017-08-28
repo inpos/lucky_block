@@ -104,7 +104,7 @@ if minetest.get_modpath("screwdriver") then
 
 if screwdriver and screwdriver.handler then
 minetest.register_tool(":screwdriver:screwdriver_magenta", {
-	description = "Super Mega Magenta Ultra Screwdriver 2500\n(left-click to rotate face, right-click to rotates axis)",
+	description = "Пурпурная супер мега ультра отвёртка 2500\n(левая кнопка для вращения лицевой части, правая кнопка для вращения осей)",
 	inventory_image = "screwdriver.png^[colorize:#ff009970",
 	groups = {not_in_creative_inventory = 1},
 
@@ -347,7 +347,7 @@ end
 
 -- Special items
 minetest.register_node("lucky_block:void_mirror", {
-	description = "Void Mirror (Place to see through solid walls during daytime)",
+	description = "Пустое зеркало (Установите, чтобы видеть сквозь сплошные стены в дневное время)",
 	drawtype = "normal",
 	tiles = {"default_obsidian_glass.png^[brighten"},
 	use_texture_alpha = true,

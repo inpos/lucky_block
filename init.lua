@@ -370,7 +370,7 @@ local lucky_block = function(pos, digger)
 
 		effect(pos, 25, "tnt_smoke.png", 8, 8, 1, -10, 0)
 
-		minetest.chat_send_player(digger:get_player_name(), "Random Teleport!")
+		minetest.chat_send_player(digger:get_player_name(), "Случайный телепорт!")
 
 	-- drop items
 	elseif action == "dro" then
@@ -565,7 +565,7 @@ end
 
 -- lucky block itself
 minetest.register_node('lucky_block:lucky_block', {
-	description = "Lucky Block",
+	description = "Счастливый блок",
 	tiles = {{
 		name = "lucky_block_animated.png",
 		animation = {
@@ -603,7 +603,7 @@ minetest.register_craft({
 
 -- super lucky block
 minetest.register_node('lucky_block:super_lucky_block', {
-	description = "Super Lucky Block (use Pick)",
+	description = "Сверхсчастливый блок (используйте кирку)",
 	tiles = {{
 		name="lucky_block_super_animated.png",
 		animation = {
@@ -622,7 +622,7 @@ minetest.register_node('lucky_block:super_lucky_block', {
 
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
-		meta:set_string("infotext", "Super Lucky Block")
+		meta:set_string("infotext", "Сверхсчастливый блок")
 	end,
 
 	on_dig = function(pos)
@@ -654,6 +654,6 @@ minetest.register_node('lucky_block:super_lucky_block', {
 
 
 minetest.after(0, function()
-	print ("[MOD] Lucky Blocks loaded (" .. #lucky_list .. " in total)")
+	print ("[MOD] Lucky Blocks загружен (" .. #lucky_list .. " in total)")
 end)
 
